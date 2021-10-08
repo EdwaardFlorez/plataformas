@@ -1,0 +1,23 @@
+
+<h1>mi primera tabla en angular</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+      <th scope="col">check</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people;index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{person.name}}</td>
+      <td>{{person.last_name}}</td>
+      <td>{{person.sn}}</td>
+      <td *ngIf="person.check"><i class="fas fa-check" style="color:green"></i></td>
+      <td *ngIf="!person.check"><i class="fas fa-times" style="color:red"></i></td>
+    </tr>
+  </tbody>
+</table>
